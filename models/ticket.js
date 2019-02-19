@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-//if it breaks, try new file for ticket model
+
 var ticketSchema = new Schema ({
     seat: {
         type: String, 
