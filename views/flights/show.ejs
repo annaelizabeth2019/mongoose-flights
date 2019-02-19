@@ -51,4 +51,21 @@
     <h5>No Destinations Yet</h5>
   <% } %>
 
+  <table>
+        <thead>
+          <tr>
+              <th>Tickets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% flight.findById(req.params.id, function() { %>
+            <tr>
+              <td><%= Ticket.find({flight: flight._id}, function(err, tickets) { %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% }); %>
+
+
 <%- include('../partials/footer') %>
